@@ -419,6 +419,8 @@ docker-compose --version
 
 #### 2. Start Infrastructure Services
 ```bash
+# Navigate to backend directory
+cd backend
 # Start all infrastructure services (PostgreSQL + Redis)
 docker-compose up -d
 
