@@ -559,8 +559,6 @@ pnpm test              # Run all tests
 
 
 
-**Built with ❤️ using Next.js 15, NestJS 10, and modern TypeScript patterns**
-
 ## 📚 API Documentation
 
 ### API Base URL
@@ -695,62 +693,6 @@ interface CreateVitalsDto {
 }
 ```
 
-### API Features
-
-#### 1. **Asynchronous Processing**
-- Vitals submission uses BullMQ job queue
-- Immediate response (202 Accepted) while processing in background
-- Automatic retry with exponential backoff on failure
-
-#### 2. **Caching Strategy**
-- Redis caching for frequently accessed data
-- Cache invalidation on data updates
-- Optimized for read-heavy workloads
-
-#### 3. **Data Validation**
-- Comprehensive input validation using class-validator
-- Custom validation pipes for business rules
-- Detailed error messages with field-specific feedback
-
-
-### Testing the API
-
-#### 1. **Health Check**
-
-
-#### 2. **Submit Test Data**
-```bash
-curl --location 'http://localhost:3000/api/v1/vitals' \
---header 'Content-Type: application/json' \
---data '{
-    "workerId": "test-worker-001",
-    "heartRate": 75,
-    "temperature": 36.8
-  }'
-```
-
-#### 3. **Retrieve Test Data**
-```bash
-curl --location 'http://localhost:3000/api/v1/vitals/test-worker-001/recent'
-```
-
-
-
-### API Versioning
-
-The API uses semantic versioning with the current version `v1`:
-- **Base Path**: `/api/v1`
-- **Version Strategy**: URL path versioning
-- **Backward Compatibility**: Maintained within major versions
-- **Deprecation Policy**: 6-month notice for breaking changes
-
-### Performance Characteristics
-
-- **Response Time**: < 50ms for cached data, < 200ms for database queries
-- **Throughput**: 10,000+ requests per minute
-- **Concurrent Users**: 1000+ simultaneous connections
-- **Queue Processing**: 1000+ jobs per second
-- **Cache Hit Rate**: 95%+ for read operations
 
 ## 🤝 Contributing
 
