@@ -21,93 +21,6 @@ To maintain consistency and ensure systematic execution, I documented the entire
 - **Progress Tracking**: Clear visibility into development milestones and completion status
 - **Risk Management**: Systematic approach to identifying and mitigating technical challenges
 
-### My Engineering Development Workflow
-
-#### 1. Requirements Analysis & PRD Creation
-
-I began by conducting a thorough technical analysis of the FortiSys Tech Test requirements, applying software engineering principles to identify:
-
-- **Functional Requirements**: Core system capabilities and user stories
-- **Non-Functional Requirements**: Performance, scalability, and reliability constraints
-- **Technical Constraints**: Technology stack limitations and integration requirements
-- **Success Criteria**: Measurable outcomes and acceptance criteria
-
-This analysis resulted in a comprehensive Product Requirements Document (PRD) that served as the technical blueprint for the entire system architecture.
-
-#### 2. Systematic Task Decomposition
-
-Following software engineering best practices, I decomposed the PRD into a hierarchical task structure using a proven methodology:
-
-**Task Management Approach:**
-- **Phase-Based Planning**: Organized development into logical phases (Infrastructure → Backend → Frontend) with clear handoff points
-- **Dependency Mapping**: Identified critical path dependencies and parallel development opportunities using dependency graphs
-- **Effort Estimation**: Broke down complex features into 2-4 hour focused development sessions with buffer time for integration
-- **Acceptance Criteria**: Defined clear completion criteria for each task with measurable outcomes and testing requirements
-- **Risk Assessment**: Evaluated technical risks and created mitigation strategies for high-risk components
-
-**Implementation Phases with Detailed Breakdown:**
-
-1. **Infrastructure & Database Setup** (Foundation Layer)
-   - **Database Schema Design**: Normalized relational design with optimized indexes for query performance
-   - **Development Environment**: Docker containerization, environment-specific configurations, and local development setup
-   
-2. **Backend API Development** (Service Layer)
-   - **API Design**: RESTful endpoints with OpenAPI documentation and versioning strategy
-   - **TDD Approach**: Comprehensive test coverage including unit, integration, and contract tests
-   - **Business Logic**: Service layer architecture with clear separation of concerns
-   - **Performance Optimization**: Caching strategies, database query optimization, and async processing
-   - **Security Implementation**: Input validation, authentication, rate limiting, and CORS configuration
-
-3. **Frontend Dashboard Implementation** (Presentation Layer)
-   - **Component Architecture**: Atomic design system with reusable, composable components
-   - **State Management**: Client-side state with server state synchronization and optimistic updates
-   - **Real-time Updates**: Polling strategies
-   - **Performance Optimization**: Code splitting, lazy loading, and bundle optimization
-
-**Task Hierarchy Structure:**
-```
-Phase 1: Infrastructure (Tasks 1.1 - 1.4)
-├── 1.1 Database Schema & Migrations
-├── 1.2 Connection Management & Pooling
-├── 1.3 Docker Environment Setup
-└── 1.4 Basic Health Checks
-
-Phase 2: Backend Services (Tasks 2.1 - 2.6)
-├── 2.1 Core API Endpoints
-├── 2.2 Business Logic Services
-├── 2.3 Data Access Layer
-├── 2.4 Caching Implementation
-├── 2.5 Queue Management
-└── 2.6 Comprehensive Testing
-
-Phase 3: Frontend Dashboard (Tasks 3.1 - 3.5)
-├── 3.1 Component Library Setup
-├── 3.2 Dashboard Layout & Routing
-├── 3.3 Real-time Data Integration
-├── 3.4 State Management & Caching
-└── 3.5 Performance Optimization
-```
-
-#### 3. Iterative Development with Quality Gates
-
-I implemented a rigorous development process that ensured code quality at every step:
-
-**Quality Assurance Process:**
-- **Task Completion Verification**: Each task was completed and tested before proceeding to the next, with automated validation scripts
-- **Code Review Integration**: Systematic review of all changes with focus on architecture, security, and performance best practices
-- **Test-Driven Development**: Comprehensive test coverage with unit, integration, contract, and end-to-end tests achieving >90% coverage
-- **Continuous Integration**: Automated testing and validation at each development milestone with build pipeline integration
-- **Static Code Analysis**: ESLint, Prettier, and TypeScript strict mode enforcement for code quality consistency
-- **Performance Testing**: Load testing, memory profiling, and performance regression detection
-
-**Development Benefits:**
-- **Risk Mitigation**: Early identification and resolution of technical challenges through incremental development
-- **Architectural Consistency**: Maintained design patterns, SOLID principles, and coding standards throughout development
-- **Efficient Debugging**: Isolated changes made troubleshooting and optimization straightforward with clear change boundaries
-- **Knowledge Transfer**: Clear documentation, code structure, and architectural decisions recorded for future maintenance
-- **Scalability Planning**: Built-in performance monitoring and capacity planning for production deployment
-- **Security by Design**: Security considerations integrated at every layer with regular security audits
-
 ### Practical Implementation: Cursor Workflow Execution
 
 I implemented this engineering methodology using Cursor's AI capabilities with a systematic, step-by-step approach that demonstrates professional development practices:
@@ -210,6 +123,94 @@ While Cursor provides powerful AI assistance, the **Engineer maintains full cont
 - **Knowledge Capture**: Documented process for future team members and projects
 
 This systematic Cursor workflow transformed what could have been an overwhelming development challenge into a structured, manageable process that resulted in a production-ready application with comprehensive test coverage and enterprise-grade architecture.
+
+
+### My Engineering Development Workflow
+
+#### 1. Requirements Analysis & PRD Creation
+
+I began by conducting a thorough technical analysis of the FortiSys Tech Test requirements, applying software engineering principles to identify:
+
+- **Functional Requirements**: Core system capabilities and user stories
+- **Non-Functional Requirements**: Performance, scalability, and reliability constraints
+- **Technical Constraints**: Technology stack limitations and integration requirements
+- **Success Criteria**: Measurable outcomes and acceptance criteria
+
+This analysis resulted in a comprehensive Product Requirements Document (PRD) that served as the technical blueprint for the entire system architecture.
+
+#### 2. Systematic Task Decomposition
+
+Following software engineering best practices, I decomposed the PRD into a hierarchical task structure using a proven methodology:
+
+**Task Management Approach:**
+- **Phase-Based Planning**: Organized development into logical phases (Infrastructure → Backend → Frontend) with clear handoff points
+- **Dependency Mapping**: Identified critical path dependencies and parallel development opportunities using dependency graphs
+- **Effort Estimation**: Broke down complex features into 2-4 hour focused development sessions with buffer time for integration
+- **Acceptance Criteria**: Defined clear completion criteria for each task with measurable outcomes and testing requirements
+- **Risk Assessment**: Evaluated technical risks and created mitigation strategies for high-risk components
+
+**Implementation Phases with Detailed Breakdown:**
+
+1. **Infrastructure & Database Setup** (Foundation Layer)
+   - **Database Schema Design**: Normalized relational design with optimized indexes for query performance
+   - **Development Environment**: Docker containerization, environment-specific configurations, and local development setup
+   
+2. **Backend API Development** (Service Layer)
+   - **API Design**: RESTful endpoints with OpenAPI documentation and versioning strategy
+   - **TDD Approach**: Comprehensive test coverage including unit, integration, and contract tests
+   - **Business Logic**: Service layer architecture with clear separation of concerns
+   - **Performance Optimization**: Caching strategies, database query optimization, and async processing
+   - **Security Implementation**: Input validation, authentication, rate limiting, and CORS configuration
+
+3. **Frontend Dashboard Implementation** (Presentation Layer)
+   - **Component Architecture**: Atomic design system with reusable, composable components
+   - **State Management**: Client-side state with server state synchronization and optimistic updates
+   - **Real-time Updates**: Polling strategies
+   - **Performance Optimization**: Code splitting, lazy loading, and bundle optimization
+
+**Task Hierarchy Structure:**
+```
+Phase 1: Infrastructure (Tasks 1.1 - 1.4)
+├── 1.1 Database Schema & Migrations
+├── 1.2 Connection Management & Pooling
+├── 1.3 Docker Environment Setup
+└── 1.4 Basic Health Checks
+
+Phase 2: Backend Services (Tasks 2.1 - 2.6)
+├── 2.1 Core API Endpoints
+├── 2.2 Business Logic Services
+├── 2.3 Data Access Layer
+├── 2.4 Caching Implementation
+├── 2.5 Queue Management
+└── 2.6 Comprehensive Testing
+
+Phase 3: Frontend Dashboard (Tasks 3.1 - 3.5)
+├── 3.1 Component Library Setup
+├── 3.2 Dashboard Layout & Routing
+├── 3.3 Real-time Data Integration
+├── 3.4 State Management & Caching
+└── 3.5 Performance Optimization
+```
+
+#### 3. Iterative Development with Quality Gates
+
+I implemented a rigorous development process that ensured code quality at every step:
+
+**Quality Assurance Process:**
+- **Task Completion Verification**: Each task was completed and tested before proceeding to the next, with automated validation scripts
+- **Code Review Integration**: Systematic review of all changes with focus on architecture, security, and performance best practices
+- **Test-Driven Development**: Comprehensive test coverage with unit, integration, contract, and end-to-end tests achieving >90% coverage
+- **Continuous Integration**: Automated testing and validation at each development milestone with build pipeline integration
+- **Static Code Analysis**: ESLint, Prettier, and TypeScript strict mode enforcement for code quality consistency
+- **Performance Testing**: Load testing, memory profiling, and performance regression detection
+
+**Development Benefits:**
+- **Risk Mitigation**: Early identification and resolution of technical challenges through incremental development
+- **Architectural Consistency**: Maintained design patterns, SOLID principles, and coding standards throughout development
+- **Efficient Debugging**: Isolated changes made troubleshooting and optimization straightforward with clear change boundaries
+- **Knowledge Transfer**: Clear documentation, code structure, and architectural decisions recorded for future maintenance
+- **Scalability Planning**: Built-in performance monitoring and capacity planning for production deployment
+- **Security by Design**: Security considerations integrated at every layer with regular security audits
 
 
 # FortiSys Worker Vitals Dashboard
