@@ -1,0 +1,208 @@
+---
+alwaysApply: false
+---
+
+## Core Principles
+
+- **ALWAYS** use `export class` for providers, controllers, and modules
+- **ALWAYS** use dependency injection
+- **ALWAYS** follow SOLID principles
+- **ALWAYS** use repository pattern with Prisma
+- **ALWAYS** validate all inputs with class-validator
+- **ALWAYS** handle database errors properly
+
+## Project Structure
+
+```
+src/
+├── features/               # Feature modules (user, auth, etc.)
+│   └── user/              # Example feature
+│       ├── controllers/   # Route handlers
+│       ├── services/      # Business logic
+│       ├── repositories/  # Data access (Prisma)
+│       ├── dto/           # Data Transfer Objects
+│       └── user.module.ts # Feature module
+├── common/                # Shared utilities
+├── prisma/                # Prisma configuration
+└── main.ts                # Application entry point
+```
+
+
+## Required Libraries
+- **@nestjs/common**: Core NestJS framework
+- **@nestjs/config**: Environment configuration
+- **@nestjs/swagger**: API documentation
+- **prisma**: ORM for database access
+- **@nestjs/mapped-types**: DTO inheritance
+- **class-validator** and **class-transformer**: DTO validation
+
+## Layer Responsibilities
+
+### Controllers
+- Handle HTTP requests/responses ONLY
+- Validate input with DTOs
+- Delegate business logic to services
+- Return appropriate HTTP status codes
+
+### Services
+- Implement business logic
+- Orchestrate data access via repositories
+- Handle business validation
+- Throw domain-specific exceptions
+
+### Repositories
+- Abstract Prisma operations
+- Handle database queries
+- Implement data access patterns
+- Use transactions for multi-table operations
+
+### DTOs
+- Define data validation rules
+- Document API with Swagger
+- Implement transformation logic
+
+## Prisma Best Practices
+
+- Use repository pattern to abstract Prisma client
+- Handle Prisma-specific errors with dedicated filters
+- Use transactions for multi-table operations
+- Follow consistent naming conventions
+- Generate types from Prisma schema
+
+## SOLID Principles
+
+### Single Responsibility
+- Each class has one clear purpose
+- Controllers handle HTTP, services handle business logic, repositories handle data access
+
+### Open/Closed
+- Use inheritance and composition to extend functionality
+- Create base classes for common operations
+
+### Liskov Substitution
+- Subtypes must be substitutable for their base types
+- Use interfaces to define contracts
+
+### Interface Segregation
+- Create focused interfaces
+- Don't force clients to depend on methods they don't use
+
+### Dependency Inversion
+- High-level modules depend on abstractions
+- Use dependency injection for loose coupling
+
+## Common Anti-Patterns to Avoid
+
+- ❌ Business logic in controllers
+- ❌ Direct Prisma calls in services
+- ❌ Large, unfocused classes
+- ❌ Missing validation in DTOs
+- ❌ Inconsistent error handling
+- ❌ Circular dependencies
+
+## Naming Conventions
+
+- Files: kebab-case (`user.controller.ts`)
+- Classes: PascalCase (`UserController`)
+- Methods: camelCase (`findAll`)
+- Interfaces: PascalCase (`UserRepository`)
+- DTOs: PascalCase with Dto suffix (`CreateUserDto`)
+- Prisma Models: PascalCase singular (`User`)
+- Database Tables: snake_case plural (`users`)## Core Principles
+
+- **ALWAYS** use `export class` for providers, controllers, and modules
+- **ALWAYS** use dependency injection
+- **ALWAYS** follow SOLID principles
+- **ALWAYS** use repository pattern with Prisma
+- **ALWAYS** validate all inputs with class-validator
+- **ALWAYS** handle database errors properly
+
+## Project Structure
+
+```
+src/
+├── features/               # Feature modules (user, auth, etc.)
+│   └── user/              # Example feature
+│       ├── controllers/   # Route handlers
+│       ├── services/      # Business logic
+│       ├── repositories/  # Data access (Prisma)
+│       ├── dto/           # Data Transfer Objects
+│       └── user.module.ts # Feature module
+├── common/                # Shared utilities
+├── prisma/                # Prisma configuration
+└── main.ts                # Application entry point
+```
+
+## Layer Responsibilities
+
+### Controllers
+- Handle HTTP requests/responses ONLY
+- Validate input with DTOs
+- Delegate business logic to services
+- Return appropriate HTTP status codes
+
+### Services
+- Implement business logic
+- Orchestrate data access via repositories
+- Handle business validation
+- Throw domain-specific exceptions
+
+### Repositories
+- Abstract Prisma operations
+- Handle database queries
+- Implement data access patterns
+- Use transactions for multi-table operations
+
+### DTOs
+- Define data validation rules
+- Document API with Swagger
+- Implement transformation logic
+
+## Prisma Best Practices
+
+- Use repository pattern to abstract Prisma client
+- Handle Prisma-specific errors with dedicated filters
+- Use transactions for multi-table operations
+- Follow consistent naming conventions
+- Generate types from Prisma schema
+
+## SOLID Principles
+
+### Single Responsibility
+- Each class has one clear purpose
+- Controllers handle HTTP, services handle business logic, repositories handle data access
+
+### Open/Closed
+- Use inheritance and composition to extend functionality
+- Create base classes for common operations
+
+### Liskov Substitution
+- Subtypes must be substitutable for their base types
+- Use interfaces to define contracts
+
+### Interface Segregation
+- Create focused interfaces
+- Don't force clients to depend on methods they don't use
+
+### Dependency Inversion
+- High-level modules depend on abstractions
+- Use dependency injection for loose coupling
+
+## Common Anti-Patterns to Avoid
+
+- ❌ Business logic in controllers
+- ❌ Direct Prisma calls in services
+- ❌ Large, unfocused classes
+- ❌ Missing validation in DTOs
+- ❌ Inconsistent error handling
+- ❌ Circular dependencies
+
+## Naming Conventions
+
+- Files: kebab-case (`user.controller.ts`)
+- Classes: PascalCase (`UserController`)
+- Methods: camelCase (`findAll`)
+- Interfaces: PascalCase (`UserRepository`)
+- DTOs: PascalCase with Dto suffix (`CreateUserDto`)
+- Prisma Models: PascalCase singular (`User`)
+- Database Tables: snake_case plural (`users`)

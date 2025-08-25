@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL_PRIMARY")
+}
+
+model VitalRecord {
+  id          String   @id @default(uuid())
+  workerId    String   @map("worker_id")
+  heartRate   Int      @map("heart_rate")
+  temperature Float
+  timestamp   DateTime @default(now())
+
+  @@map("vital_records")
+  @@index([workerId])
+  @@index([timestamp])
+  @@index([workerId, timestamp])
+}
