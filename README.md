@@ -274,12 +274,6 @@ A high-performance, real-time worker vitals monitoring system built with modern 
 - **PostgreSQL** - Robust relational database with replication
 - **Class Validator** - Input validation and sanitization
 
-### Infrastructure
-- **Docker** - Containerized development environment
-- **PostgreSQL 14** - Primary + 2 read replicas with WAL streaming
-- **Redis 7** - In-memory caching and job queue backend
-- **BullMQ** - High-performance job processing
-- **Health Checks** - Automated service monitoring and failover
 
 ## 🏛️ Component Architecture
 
@@ -345,7 +339,6 @@ A high-performance, real-time worker vitals monitoring system built with modern 
 - **Zod Schemas** - Runtime type validation
 - **Class Validator** - DTO validation with decorators
 - **Input Sanitization** - XSS and injection protection
-- **Rate Limiting** - API abuse prevention
 
 ### Error Handling
 - **Global Exception Filters** - Consistent error responses
@@ -353,11 +346,6 @@ A high-performance, real-time worker vitals monitoring system built with modern 
 - **Error Boundaries** - Graceful failure handling
 - **Retry Mechanisms** - Automatic failure recovery
 
-### Data Integrity
-- **Transaction Support** - Atomic operations for data consistency
-- **Optimistic Locking** - Conflict resolution for concurrent updates
-- **Audit Logging** - Comprehensive operation tracking
-- **Backup Strategies** - Data protection and recovery
 
 ## 📊 Why This Architecture is Efficient
 
@@ -409,8 +397,8 @@ A high-performance, real-time worker vitals monitoring system built with modern 
 #### 1. Clone and Setup Repository
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd forti-sys-test
+git clone https://github.com/minhhieple97/fortisys.git
+cd fortisys
 
 # Verify Docker is running
 docker --version
@@ -483,16 +471,6 @@ pnpm dev
 ```
 
 
-#### Dependency Issues
-```bash
-# Clear pnpm cache
-pnpm store prune
-
-# Remove node_modules and reinstall
-rm -rf node_modules pnpm-lock.yaml
-pnpm install
-```
-
 ### Development Workflow
 
 #### Daily Development
@@ -516,26 +494,6 @@ cd backend
 pnpm test              # Run all tests
 ```
 
-## 📈 Performance Benchmarks
-
-### Database Performance
-- **Primary Write Performance**: 10,000+ writes per second with WAL streaming
-- **Read Replica Performance**: 50,000+ reads per second across replicas
-- **Replication Lag**: < 100ms for real-time data synchronization
-- **Failover Time**: < 5 seconds for automatic replica promotion
-
-### Application Performance
-- **API Response Time**: < 50ms for cached data, < 200ms for database queries
-- **Concurrent Users**: Supports 1000+ simultaneous connections
-- **Data Throughput**: 10,000+ vitals records per minute
-- **Cache Hit Rate**: 95%+ for read operations
-- **Queue Processing**: 1000+ jobs per second
-
-### Infrastructure Performance
-- **Container Startup**: < 10 seconds for all services
-- **Health Check Response**: < 100ms for service monitoring
-- **Memory Usage**: < 2GB total for all containers
-- **Network Latency**: < 1ms between services on localhost
 
 ## 🔧 Development Guidelines
 
